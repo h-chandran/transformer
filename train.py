@@ -5,14 +5,14 @@ Currently, we are using the tiny shakespeare dataset, which is a text file conta
 
 """
 with open('input.txt', 'r', encoding = 'utf-8') as f:
-    data = f.read()
+    text = f.read()
 
 # Some limited data analysis to understand the dataset.
 
-print("length of dataset in characters: ", len(data))
-print(data[:1000])
+print("length of dataset in characters: ", len(text))
+print(text[:1000])
 
-chars = sorted(list(set(data)))
+chars = sorted(list(set(text)))
 vocab_size = len(chars)
 print("all the unique characters: ", ''.join(chars))
 print("vocab size: ", vocab_size)
@@ -27,3 +27,5 @@ def decode(l):
 
 print("encode: ", encode("hii there"))
 print("decode: ", decode(encode("hii there")))
+
+
